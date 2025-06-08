@@ -1,0 +1,38 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0055aa;
+}
+
+body.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #ffffff;
+  --accent-color: #66ccff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+button {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}

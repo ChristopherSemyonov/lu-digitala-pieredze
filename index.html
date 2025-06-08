@@ -1,37 +1,168 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="lv" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mana digitālā pieredze LU</title>
+    <title>Gudrais maršruts uz LU</title>
+
+    <!-- Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
+    <!-- Twemoji for crisp white emojis -->
+    <script
+      src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <h1>Mana digitālā pieredze LU</h1>
-      <button id="toggle-theme">Pārslēgt režīmu</button>
+      <div class="container header-inner">
+        <div class="logo-link">
+          <img
+            src="images/lu-logo.png"
+            alt="LU logo"
+            class="logo-light"
+            height="80"
+          />
+          <img
+            src="images/lu-logo-invers.png"
+            alt="LU logo inverted"
+            class="logo-dark"
+            height="80"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Mobilly</a></li>
+            <li><a href="#">Rīgas Satiksme</a></li>
+            <li><a href="#">Bolt</a></li>
+          </ul>
+        </nav>
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          ☀️
+        </button>
+      </div>
     </header>
 
+    <!-- Hero -->
     <main>
-      <section>
-        <h2>Ievads</h2>
-        <p>
-          Mana digitālā pieredze sākās, kad nolēmu studēt Latvijas
-          Universitātē...
-        </p>
+      <div class="container">
+        <section class="hero">
+          <div class="hero-image">
+            <img src="images/header.jpg" alt="Universitātes ēka" />
+          </div>
+          <div class="hero-text">
+            <h1>Mans digitālais ceļš uz LU</h1>
+          </div>
+        </section>
+      </div>
+
+      <!-- 5 Alternating Content Rows -->
+      <section class="row-section shade1">
+        <div class="container row-grid">
+          <div class="row-image">
+            <img src="images/example1.jpg" alt="Example Image 1" />
+          </div>
+          <div class="row-text">
+            <h2>First Topic</h2>
+            <p>Content for the first topic, image on the left.</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>Digitālie rīki</h2>
-        <p>
-          LU Moodle, MS Teams, LU e-pasts, VPN, u.c. rīki ikdienas studijām.
-        </p>
+
+      <section class="row-section reverse shade2">
+        <div class="container row-grid">
+          <div class="row-image">
+            <img src="images/example2.jpg" alt="Example Image 2" />
+          </div>
+          <div class="row-text">
+            <h2>Second Topic</h2>
+            <p>Content for the second topic, image on the right.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-section shade3">
+        <div class="container row-grid">
+          <div class="row-image">
+            <img src="images/example3.jpg" alt="Example Image 3" />
+          </div>
+          <div class="row-text">
+            <h2>Third Topic</h2>
+            <p>Content for the third topic, image on the left.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-section reverse shade4">
+        <div class="container row-grid">
+          <div class="row-image">
+            <img src="images/example4.jpg" alt="Example Image 4" />
+          </div>
+          <div class="row-text">
+            <h2>Fourth Topic</h2>
+            <p>Content for the fourth topic, image on the right.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row-section shade5">
+        <div class="container row-grid">
+          <div class="row-image">
+            <img src="images/example5.jpg" alt="Example Image 5" />
+          </div>
+          <div class="row-text">
+            <h2>Fifth Topic</h2>
+            <p>Content for the fifth topic, image on the left.</p>
+          </div>
+        </div>
       </section>
     </main>
 
+    <!-- Footer Top: Contact only -->
     <footer>
-      <p>&copy; 2025 Mana LU pieredze</p>
+      <div class="footer-top">
+        <div class="container">
+          <div class="footer-contact">
+            <h3>Saziņai</h3>
+            <ul>
+              <li>
+                <span class="icon">✉️</span>
+                <a href="mailto:ks22110@students.lu.lv"
+                  >ks22110@students.lu.lv</a
+                >
+              </li>
+              <li>
+                <span class="icon">🔗</span>
+                <a href="https://github.com/ChristopherSemyonov" target="_blank"
+                  >Mans GitHub profils</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: full-width bar -->
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2025 Kristofers Semjonovs ks22110</p>
+        </div>
+      </div>
     </footer>
 
+    <script>
+      if (window.twemoji)
+        twemoji.parse(document.body, { folder: 'svg', ext: '.svg' })
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

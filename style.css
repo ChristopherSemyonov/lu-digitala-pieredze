@@ -1,38 +1,233 @@
 :root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-  --accent-color: #0055aa;
+  --bg: #f0f4f8;
+  --text: #20232a;
+  --header-bg: #f0f2f5;
+  --shade1: #e6f7e6;
+  --shade2: #d1efd1;
+  --shade3: #bbe7bb;
+  --shade4: #a6dfa6;
+  --shade5: #91d791;
 }
 
-body.dark-mode {
-  --bg-color: #1e1e1e;
-  --text-color: #ffffff;
-  --accent-color: #66ccff;
+[data-theme='dark'] {
+  --bg: #121212;
+  --text: #ffffff;
+  --header-bg: #1e1e1e;
+  --shade1: #264926;
+  --shade2: #1f3d1f;
+  --shade3: #193119;
+  --shade4: #122512;
+  --shade5: #0b190b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', Arial, sans-serif;
 }
 
-header,
-footer {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 1rem;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: var(--header-bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+[data-theme='dark'] header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+.logo-light {
+  display: inline;
+}
+.logo-dark {
+  display: none;
+}
+[data-theme='dark'] .logo-light {
+  display: none;
+}
+[data-theme='dark'] .logo-dark {
+  display: inline;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Hero */
+.hero {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+  margin-bottom: 4rem;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-text {
+  background: var(--shade3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+.subtitle {
+  font-size: 1.5rem;
+  opacity: 0.85;
+}
+
+/* Row Sections */
+.row-section.shade1 {
+  background: var(--shade1);
+}
+.row-section.shade2 {
+  background: var(--shade2);
+}
+.row-section.shade3 {
+  background: var(--shade3);
+}
+.row-section.shade4 {
+  background: var(--shade4);
+}
+.row-section.shade5 {
+  background: var(--shade5);
+}
+
+.row-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'image text';
+  align-items: stretch;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+.row-section.reverse .row-grid {
+  grid-template-areas: 'text image';
+}
+
+.row-image {
+  grid-area: image;
+}
+.row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.row-text {
+  grid-area: text;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Footer Top (Contact only) */
+.footer-top {
+  background: var(--shade1);
+}
+.footer-contact {
+  padding: 4rem 0;
+}
+.footer-contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-contact ul {
+  list-style: none;
+}
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.footer-contact .icon {
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+}
+.footer-contact a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Footer Bottom: full-width bar */
+.footer-bottom {
+  width: 100%;
+  background: var(--header-bg);
+}
+.footer-bottom .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
   text-align: center;
 }
 
-main {
-  padding: 2rem;
-}
-
-button {
-  margin-top: 10px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+@media (max-width: 768px) {
+  .hero,
+  .row-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+  }
+  nav a {
+    font-size: 1.125rem;
+  }
+  .hero-text,
+  .row-text {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .row-grid {
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .footer-contact {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
 }

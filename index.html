@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gudrais maršruts uz LU</title>
+    <link rel="icon" type="image/png" href="images/bus.png" />
+    <title>Digitālais ceļš uz LU</title>
 
     <!-- Inter font -->
     <link
@@ -21,34 +22,66 @@
     <!-- Header -->
     <header>
       <div class="container header-inner">
-        <div class="logo-link">
-          <img
-            src="images/lu-logo.png"
-            alt="LU logo"
-            class="logo-light"
-            height="80"
-          />
-          <img
-            src="images/lu-logo-invers.png"
-            alt="LU logo inverted"
-            class="logo-dark"
-            height="80"
-          />
+        <div class="header-left">
+          <a
+            href="https://eztf.lu.lv/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="logo-link"
+          >
+            <img
+              src="images/lu-logo.png"
+              alt="LU logo"
+              class="logo-light"
+              height="80"
+            />
+            <img
+              src="images/lu-logo-invers.png"
+              alt="LU logo inverted"
+              class="logo-dark"
+              height="80"
+            />
+          </a>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">Mobilly</a></li>
-            <li><a href="#">Rīgas Satiksme</a></li>
-            <li><a href="#">Bolt</a></li>
-          </ul>
-        </nav>
-        <button
-          id="theme-toggle"
-          class="theme-toggle"
-          aria-label="Toggle theme"
-        >
-          ☀️
-        </button>
+        <div class="header-center">
+          <nav>
+            <ul>
+              <li>
+                <a
+                  href="https://mobilly.lv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Mobilly</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.rigassatiksme.lv/lv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Rīgas Satiksme</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://bolt.eu/lv-lv/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bolt</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-right">
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            aria-label="Toggle theme"
+          >
+            ☀️
+          </button>
+        </div>
       </div>
     </header>
 
@@ -60,7 +93,11 @@
             <img src="images/header.jpg" alt="Universitātes ēka" />
           </div>
           <div class="hero-text">
-            <h1>Mans digitālais ceļš uz LU</h1>
+            <h1>Digitālais ceļš uz LU</h1>
+            <p class="hero-subtitle">
+              Šī vietne palīdz studentiem un interesentiem iepazīt digitālos
+              rīkus, kas atvieglo ceļu uz Latvijas Universitāti.
+            </p>
           </div>
         </section>
       </div>
@@ -72,8 +109,17 @@
             <img src="images/example1.jpg" alt="Example Image 1" />
           </div>
           <div class="row-text">
-            <h2>First Topic</h2>
-            <p>Content for the first topic, image on the left.</p>
+            <h2>Sabiedriskais transports studentiem</h2>
+            <p>
+              Sabiedriskais transports ir būtisks ikdienas rīks studentiem, kas
+              ļauj ērti un ekonomiski pārvietoties starp mājām, universitāti un
+              citiem galamērķiem. Daudzi studenti izvēlas vilcienu, tramvaju vai
+              autobusu, lai izvairītos no sastrēgumiem un ietaupītu uz degvielas
+              izmaksām. Pateicoties plašajam maršrutu tīklam, sabiedriskais
+              transports ir pieejams lielākajā daļā Rīgas un arī ārpus tās. Tas
+              ir arī videi draudzīgāks pārvietošanās veids, kas samazina CO₂
+              emisijas.
+            </p>
           </div>
         </div>
       </section>
@@ -84,8 +130,16 @@
             <img src="images/example2.jpg" alt="Example Image 2" />
           </div>
           <div class="row-text">
-            <h2>Second Topic</h2>
-            <p>Content for the second topic, image on the right.</p>
+            <h2>Rīgas satiksmes lietotne un studentu mēnešbiļete</h2>
+            <p>
+              Rīgas Satiksmes oficiālā lietotne ļauj ātri un ērti iegādāties
+              sabiedriskā transporta biļetes. Studenti īpaši novērtē iespēju
+              iegādāties mēnešbiļeti par 15 eiro, kas nodrošina neierobežotu
+              braukšanu pilsētā. Lietotnē iespējams arī pārbaudīt biļešu
+              derīgumu, iegūt informāciju par tuvākajiem pieturpunktiem un
+              saņemt aktuālus paziņojumus. Tas samazina nepieciešamību meklēt
+              fiziskos biļešu automātus un ļauj visu izdarīt digitāli.
+            </p>
           </div>
         </div>
       </section>
@@ -96,8 +150,16 @@
             <img src="images/example3.jpg" alt="Example Image 3" />
           </div>
           <div class="row-text">
-            <h2>Third Topic</h2>
-            <p>Content for the third topic, image on the left.</p>
+            <h2>Mobilly — biļešu iegāde dažu sekunžu laikā</h2>
+            <p>
+              Mobilly ir populāra lietotne, ko studenti izmanto sabiedriskā
+              transporta biļešu iegādei, autostāvvietu apmaksai un citiem
+              pakalpojumiem. Tā darbojas gan Android, gan iOS ierīcēs un piedāvā
+              vienkāršu un saprotamu saskarni. Lietotne atbalsta arī maksājumus
+              ar bankas kartēm un piedāvā iespēju automātiski atgādināt par
+              biļetes derīguma beigām. Mobilly atvieglo studentu ikdienu,
+              padarot pārvietošanos pilsētā ērtāku un ātrāku.
+            </p>
           </div>
         </div>
       </section>
@@ -108,8 +170,16 @@
             <img src="images/example4.jpg" alt="Example Image 4" />
           </div>
           <div class="row-text">
-            <h2>Fourth Topic</h2>
-            <p>Content for the fourth topic, image on the right.</p>
+            <h2>Rīgas satiksmes mājaslapa un reāllaika karte</h2>
+            <p>
+              Rīgas Satiksmes vietne piedāvā interaktīvu karti, kas rāda
+              sabiedriskā transporta kustību reāllaikā. Studenti var redzēt, kur
+              tieši atrodas autobusi, trolejbusi vai tramvaji un kad tie pienāks
+              pieturā. Kartē var arī atrast tuvāko pieturu. Šī funkcija ļauj
+              labāk plānot maršrutu un izvairīties no ilgas gaidīšanas. Kartes
+              funkcionalitāte īpaši noderīga sliktos laikapstākļos vai, kad ir
+              steiga.
+            </p>
           </div>
         </div>
       </section>
@@ -120,8 +190,16 @@
             <img src="images/example5.jpg" alt="Example Image 5" />
           </div>
           <div class="row-text">
-            <h2>Fifth Topic</h2>
-            <p>Content for the fifth topic, image on the left.</p>
+            <h2>Bolt skūteru noma ar mobilo lietotni</h2>
+            <p>
+              Bolt piedāvā iespēju ērti iznomāt elektroskūterus, izmantojot viņu
+              mobilo lietotni. Šis ir ātrs, videi draudzīgs un elastīgs
+              pārvietošanās veids, īpaši piemērots īsiem braucieniem starp
+              sabiedriskā transporta pieturām vai pārvietojoties LU teritorijā.
+              Lietotnē iespējams redzēt tuvākos skūterus, to baterijas līmeni un
+              rezervēt braucienu ar vienu pieskārienu. Atcerieties braukt
+              uzmanīgi un atbildīgi.
+            </p>
           </div>
         </div>
       </section>
